@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secciones con Estilos Personalizados</title>
+    <!-- Google Fonts (opcional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* --- ESTILOS DE INICIO --- */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #000000; /* Color del texto */
+            background-image: url("imagenes/UNAD LOGO 2.png"); /* Ruta de la imagen */
+            background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+            background-attachment: fixed; /* Fija la imagen para que no se desplace con el scroll */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+        }
+        h1, h2, h3 {
+            color: #28639b; /* Color de los títulos */
+        }
+        /* --- MENÚ DE BOTONES HORIZONTALES --- */
+        .menu-principal {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+            background-color: rgba(236, 240, 241, 0.8); /* Fondo del menú con transparencia */
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .boton-seccion {
+            background-color: #3498db; /* Color de los botones (AZUL) */
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            flex: 1;
+            min-width: 150px;
+            margin: 5px;
+            transition: background-color 0.3s; /* Efecto suave al pasar el mouse */
+        }
+        .boton-seccion:hover {
+            background-color: #2980b9; /* Color al pasar el mouse (AZUL OSCURO) */
+        }
+        /* --- SECCIONES PRINCIPALES --- */
+        .seccion-principal {
+            border: 1px solid #bdc3c7;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo de las secciones con transparencia */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: none; /* Ocultar todas las secciones por defecto */
+        }
+        /* --- SUBSECCIONES --- */
+        .subseccion {
+            padding: 10px;
+            margin-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        /* --- CONTENEDOR PARA CENTRAR IMÁGENES Y VIDEOS --- */
+        .imagen-centrada {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .imagen-centrada img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .video-container {
+            margin: 10px 0;
+            text-align: center;
+        }
+        .video-container iframe {
+            max-width: 100%;
+            height: 315px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Universidad Nacional Abierta y a Distancia - UNAD</h1>
+    <!-- Menú de botones horizontales -->
+    <div class="menu-principal">
+        <button class="boton-seccion" onclick="mostrarSeccion('admision')">
+            1. Admisión y Matrícula
+        </button>
+        <button class="boton-seccion" onclick="mostrarSeccion('plataformas')">
+            2. Plataformas Académicas
+        </button>
+        <button class="boton-seccion" onclick="mostrarSeccion('bienestar')">
+            3. Servicios de Bienestar
+        </button>
+        <button class="boton-seccion" onclick="mostrarSeccion('recursos')">
+            4. Recursos Académicos
+        </button>
+        <button class="boton-seccion" onclick="mostrarSeccion('servicios')">
+            5. Servicios Institucionales
+        </button>
+    </div>
+    <!-- Sección 1: Admisión y Matrícula -->
+    <div id="admision" class="seccion-principal">
+        <h2>1. Admisión y Matrícula</h2>
+        <div class="subseccion">
+            <h3>1.1 Proceso de Admisión</h3>
+            <p>La Universidad Nacional Abierta y a Distancia (UNAD) ofrece un proceso de admisión sencillo y accesible para quienes desean iniciar su formación profesional, tecnológica o de posgrado. A continuación, encontrarás los pasos principales:</p>
+            <p>1. Revisión de requisitos</p>
+            <p>Cada programa académico cuenta con requisitos específicos. Algunos, como Psicología, Derecho o Radiología e Imágenes Diagnósticas, exigen procesos de admisión especiales. Es importante revisar la documentación solicitada (diplomas, actas, certificados y documentos de identidad) antes de iniciar la inscripción.</p>
+            <p>2. Preinscripción e inscripción</p>
+            <p>En los programas que lo requieran, se debe realizar una preinscripción previa, que incluye aceptar un acta de compromiso y acceder al micrositio correspondiente. Luego, se diligencia el formulario de inscripción en la plataforma institucional y, en algunos casos, se cancela un valor por concepto de derechos de admisión.</p>
+            <p>3. Prueba de admisión (cuando aplica)</p>
+            <p>Ciertos programas exigen la presentación de una prueba escrita o clasificatoria. En este paso, también se deben aceptar términos técnicos como el reconocimiento facial y cumplir con las condiciones establecidas por la universidad.</p>
+            <p>4. Publicación de admitidos</p>
+            <p>La UNAD publica en su calendario académico el listado oficial de estudiantes admitidos y elegibles, según los resultados obtenidos en la inscripción o en las pruebas de admisión.</p>
+            <p>5. Formalización de matrícula</p>
+            <p>Los aspirantes admitidos deben:</p>
+            <p>- Entregar los documentos requeridos (fotocopia de acta o diploma, documento de identidad y fotografía).</p>
+            <p>- Realizar el pago de matrícula y derechos estudiantiles en las fechas establecidas.</p>
+            <p>- Confirmar su matrícula en la plataforma institucional.</p>
+            <p>6. Inicio del periodo académico</p>
+            <p>Con la matrícula formalizada, el estudiante queda oficialmente vinculado a la universidad e inicia su proceso formativo de acuerdo con el calendario académico vigente.</p>
+            <div class="imagen-centrada">
+                <img src="imagenes/inscripcion.jpg" alt="Proceso de Admisión">
+            </div>
+            <!-- Video de YouTube -->
+            <div class="video-container">
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/23-ppLexrD8"
+                    title="Video de Admisión"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        <div class="subseccion">
+            <h3>1.2 Matrícula en Línea</h3>
+            <p>¿Cómo formalizar la matrícula?</p>
+            <p>Para realizar exitosamente su inscripción y matrícula, debe tener en cuenta los siguientes pasos, por favor, sígalos atentamente:</p>
+            <p>1. Consulte la oferta de programas e identifique el que sea de su interés. Así mismo, tenga en cuenta las fechas de inscripciones y matrículas, según el calendario académico vigente.</p>
+            <p>2. Consulte los costos y requisitos de admisión.</p>
+            <p>3. Estudie las alternativas de financiación y los descuentos por convenios institucionales que ofrece la UNAD.</p>
+            <p>4. Inscríbase a través del formulario virtual en los vínculos arriba señalados teniendo en cuenta si es estudiante nuevo o estudiante antiguo.</p>
+            <div class="imagen-centrada">
+                <img src="imagenes/proceso de inscripcion.jpg" alt="Matrícula en Línea">
+            </div>
+            <!-- Video de YouTube -->
+            <div class="video-container">
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/23-ppLexrD8"
+                    title="Video de Matrícula"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Sección 2: Plataformas Académicas -->
+    <div id="plataformas" class="seccion-principal">
+        <h2>2. Plataformas Académicas</h2>
+        <div class="subseccion">
+            <h3>2.1 Campus virtual</h3>
+            <p>El campus virtual es la plataforma virtual de aprendizaje utilizada por la Universidad Nacional Abierta y a Distancia (UNAD). A través de este entorno, los estudiantes acceden a sus cursos, materiales académicos, actividades, evaluaciones y espacios de comunicación con los docentes.
+Desde el campus virtual, los estudiantes pueden participar en foros, enviar tareas, realizar cuestionarios, consultar calificaciones y acceder a recursos multimedia diseñados para fortalecer su proceso educativo.
+Esta herramienta permite estudiar desde cualquier lugar, en cualquier momento, garantizando flexibilidad, acompañamiento y calidad en la formación a distancia que ofrece la UNAD.
+Para ingresar, el estudiante debe contar con su usuario y contraseña institucional, los cuales se entregan al momento de formalizar la matrícula.</p>
+            <div class="imagen-centrada">
+                <img src="imagenes/campus virtual.png" alt="Campus Virtual">
+            </div>
+            <!-- Video de YouTube -->
+            <div class="video-container">
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/J9gKOk_OWGI"
+                    title="Video de Campus Virtual"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        <div class="subseccion">
+            <h3>2.2 Microsoft Teams</h3>
+            <p>Uso de Teams para clases virtuales y reuniones.</p>
+            <div class="imagen-centrada">
+                <img src="imagenes/teams.png" alt="Microsoft Teams">
+            </div>
+            <!-- Video de YouTube -->
+            <div class="video-container">
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/qxuMuYXOPEM"
+                    title="Video de Microsoft Teams"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Sección 3: Servicios de Bienestar Universitario -->
+    <div id="bienestar" class="seccion-principal">
+        <h2>3. Servicios de Bienestar Universitario</h2>
+        <div class="subseccion">
+            <h3>3.1 Salud y Psicología</h3>
+            <p>La Universidad Nacional Abierta y a Distancia (UNAD) ofrece a sus estudiantes una red de servicios de bienestar universitario enfocados en el cuidado integral de la salud física y mental.
+A través del Servicio de Salud y Apoyo Psicológico, la UNAD brinda acompañamiento gratuito a los estudiantes que requieran orientación emocional, apoyo psicológico o asesoría frente a situaciones personales, familiares o académicas que puedan afectar su bienestar y desempeño académico.
+Estos servicios son prestados por profesionales de la psicología y el bienestar universitario, quienes ofrecen atención individual, talleres grupales, charlas y campañas de promoción de la salud mental.
+También se promueve la participación en programas de autocuidado, hábitos saludables, manejo del estrés y fortalecimiento de habilidades socioemocionales.
+Los estudiantes pueden solicitar cita o acompañamiento directamente desde el portal de bienestar universitario o contactando al equipo de apoyo en su CEAD o zona.</p>
+            <div class="imagen-centrada">
+                <img src="imagenes/psicologia.jpg" alt="Salud y Psicología">
+            </div>
+            <!-- Video de YouTube -->
+            <div class="video-container">
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/r0i822K9ABk"
+                    title="Video de Salud y Psicología"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        <div class="subseccion">
+            <h3>3.2 Actividades Deportivas</h3>
+            <p>La Universidad Nacional Abierta y a Distancia (UNAD) promueve el bienestar integral de sus estudiantes a través de diversos programas deportivos y recreativos, diseñados para fomentar hábitos de vida saludables, el trabajo en equipo y la sana convivencia.
+Desde el área de Bienestar Universitario, la UNAD organiza actividades presenciales y virtuales como entrenamiento funcional, yoga, aeróbicos, caminatas ecológicas, torneos interzonales y encuentros deportivos entre estudiantes y funcionarios.
+Cada Centro de Educación Abierta y a Distancia (CEAD) define sus horarios de entrenamiento y práctica, los cuales se publican periódicamente en el portal de Bienestar Universitario y en las redes sociales oficiales de la universidad.
+La participación en estas actividades es voluntaria y gratuita, y busca fortalecer tanto el cuerpo como la mente, promoviendo una comunidad universitaria activa, saludable y comprometida con su desarrollo personal.</p>
+            <div class="imagen-centrada">
+                <img src="imagenes/deportiva.jpg" alt="Actividades Deportivas">
+            </div>
+            <!-- Video de YouTube -->
+            <div class="video-container">
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/KPWlEE5JREE"
+                    title="Video de Actividades Deportivas"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Sección 4: Recursos Académicos y Apoyo Estudiantil -->
+    <div id="recursos" class="seccion-principal">
+        <h2>4. Recursos Académicos y Apoyo Estudiantil</h2>
+        <div class="subseccion">
+            <h3>4.1 Biblioteca Virtual</h3>
+            <p>La Universidad Nacional Abierta y a Distancia (UNAD) pone a disposición de toda su comunidad educativa una amplia Biblioteca Digital, que brinda acceso gratuito a libros, revistas científicas, artículos, tesis, y bases de datos académicas de diversas áreas del conocimiento.
+A través del Sistema Nacional de Bibliotecas (SINAB-UNAD), los estudiantes pueden consultar recursos digitales actualizados para apoyar sus procesos de aprendizaje, investigación y producción académica.
+La biblioteca ofrece materiales en formato digital y físico, así como herramientas de búsqueda avanzada, préstamos en línea, y capacitaciones sobre el uso de bases de datos y gestores bibliográficos.
+Entre las bases de datos más consultadas se encuentran EBSCOhost, ProQuest, Scopus, Scielo y Redalyc, las cuales permiten acceder a contenido confiable y revisado por pares académicos.
+El acceso se realiza con el usuario y la contraseña institucional a través del portal oficial del SINAB-UNAD.</p>
+            <div class="imagen-centrada">
+                <img src="imagenes/biblioteca.png" alt="Biblioteca Virtual">
+            </div>
+            <!-- Video de YouTube -->
+            <div class="video-container">
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/UE8q0vUxRQo"
+                    title="Video de Biblioteca Virtual"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        <div class="subseccion">
+            <h3>4.2 Tutorías y Asesorías</h3>
+            <p>Horarios y contacto para tutorías académicas.</p>
+              <p>
+    En la <strong>UNAD</strong>, las tutorías académicas son un espacio de acompañamiento
+    personalizado donde los estudiantes pueden resolver dudas, reforzar sus conocimientos
+    y recibir orientación sobre sus procesos formativos.
+  </p>
+  <p>
+    Cada curso cuenta con un <strong>tutor asignado</strong>, disponible en horarios previamente
+    establecidos que se publican dentro del entorno virtual de aprendizaje (EVA) o en la plataforma
+    <strong>Moodle</strong>.
+  </p>
+  <p>
+    Los estudiantes pueden comunicarse con sus tutores a través de:
+  </p>
+  <ul>
+    <li>Mensajería interna de Moodle.</li>
+    <li>Correo institucional del tutor.</li>
+    <li>Videoconferencias programadas en Zoom o Teams.</li>
+    <li>Foros de tutoría disponibles en cada curso.</li>
+  </ul>
+  <p>
+    Se recomienda revisar constantemente el <strong>calendario académico</strong> y el
+    <strong>horario de tutorías</strong> para aprovechar al máximo este servicio y fortalecer
+    el aprendizaje autónomo.
+  </p>
+            <div class="imagen-centrada">
+                <img src="imagenes/aconsejaria.png" alt="Tutorías y Asesorías">
+            </div>
+            <!-- Video de YouTube -->
+            <div class="video-container">
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/NLzrwuCjjR0"
+                    title="Video de Tutorías y Asesorías"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Sección 5: Servicios Institucionales y de Comunicación -->
+    <div id="servicios" class="seccion-principal">
+        <h2>5. Servicios Institucionales y de Comunicación</h2>
+        <div class="subseccion">
+            <h3>5.1 Correo Institucional</h3>
+            <p>Configuración y uso del correo institucional.</p>
+            <p>
+    El <strong>correo institucional</strong> de la <strong>UNAD</strong> es una herramienta esencial
+    para la comunicación académica y administrativa entre estudiantes, tutores y personal de la universidad.
+  </p>
+  <p>
+    Al momento de la matrícula, cada estudiante recibe una cuenta de correo con el dominio
+    <strong>@unadvirtual.edu.co</strong>, la cual puede accederse desde la plataforma de
+    <strong>Outlook</strong> o directamente desde el portal institucional.
+  </p>
+  <p>
+    Este correo permite:
+  </p>
+  <ul>
+    <li>Recibir información oficial y notificaciones académicas.</li>
+    <li>Comunicarse con tutores, directores de curso y compañeros.</li>
+    <li>Acceder a servicios en línea vinculados a la cuenta institucional, como Microsoft Teams o OneDrive.</li>
+  </ul>
+  <p>
+    Para configurar el correo en dispositivos móviles o aplicaciones de escritorio,
+    los estudiantes pueden seguir las guías disponibles en el portal de soporte técnico
+    o comunicarse con la <strong>mesa de ayuda de la UNAD</strong>.
+  </p>
+            <div class="imagen-centrada">
+                <img src="imagenes/correo instucional.png" alt="Correo Institucional">
+            </div>
+            <!-- Video de YouTube -->
+            <div class="video-container">
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/uNSXNslH940"
+                    title="Video de Correo Institucional"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        <div class="subseccion">
+            <h3>5.2 Noticias y Eventos</h3>
+            <section id="eventos-noticias">
+  <h2>Calendario de eventos y noticias importantes</h2>
+  <p>
+    La <strong>UNAD</strong> mantiene informada a su comunidad académica a través de un
+    <strong>calendario de eventos</strong> y un espacio dedicado a las
+    <strong>noticias más relevantes</strong> del ámbito universitario.
+  </p>
+  <p>
+    En esta sección, los estudiantes pueden conocer las fechas de:
+  </p>
+  <ul>
+    <li>Actividades académicas y culturales.</li>
+    <li>Jornadas de inducción y bienvenida para nuevos estudiantes.</li>
+    <li>Seminarios, conferencias y talleres virtuales.</li>
+    <li>Eventos institucionales y conmemorativos.</li>
+    <li>Fechas clave del calendario académico (matrículas, evaluaciones, cierres, etc.).</li>
+  </ul>
+  <p>
+    Además, el espacio de <strong>noticias UNAD</strong> ofrece información actualizada sobre
+    logros institucionales, convocatorias, proyectos de investigación y actividades de bienestar universitario.
+  </p>
+  <p>
+    Se recomienda consultar regularmente esta sección para mantenerse al tanto de las
+    <strong>oportunidades y novedades</strong> que ofrece la universidad.
+  </p>
+            <div class="imagen-centrada">
+                <img src="imagenes/Calendario.png" alt="Noticias y Eventos">
+            </div>
+            <!-- Video de YouTube -->
+            <div class="video-container">
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/nYt6Ee4pjDc"
+                    title="Video de Noticias y Eventos"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            </section>
+        </div>
+    </div>
+    <script>
+        // Mostrar solo la sección seleccionada
+        function mostrarSeccion(id) {
+            const secciones = document.querySelectorAll('.seccion-principal');
+            secciones.forEach(seccion => {
+                seccion.style.display = 'none';
+            });
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
